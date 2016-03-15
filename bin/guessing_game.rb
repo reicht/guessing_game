@@ -17,10 +17,12 @@ class Game
     if what_do.to_i == 1
       reset_game
       game_play
-    elsif what_do.to_i == 2
     elsif what_do.upcase == "X"
       exit
+    elsif
+      Utils.get_response("Choose 1 or X, come on.")
     end
+    selector
   end
 
   def game_play

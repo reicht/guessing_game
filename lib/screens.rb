@@ -10,8 +10,6 @@ module Screens
     Utils.place_space
     puts "1  -  Play a Game of Guesser"
     Utils.place_space
-    puts "2  -  See Game Stats (Inactive)"
-    Utils.place_space
     puts "X  -  E(X)it the game"
     Utils.line_bar(1, 75)
     Utils.place_space
