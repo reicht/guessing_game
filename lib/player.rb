@@ -21,4 +21,8 @@ class Player
   def track_guess(guess)
     @numbers[guess.-1] = guess
   end
+
+  def randomize
+    @value = rand(1..100)
+  end
 end

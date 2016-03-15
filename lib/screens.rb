@@ -1,5 +1,5 @@
 module Screens
-  def Screens.main_menu
+  def Screens.main_menu(screenfeed)
     system ('clear')
     Utils.line_bar(2, 75)
     Utils.place_space
@@ -15,23 +15,23 @@ module Screens
     puts "X  -  E(X)it the game"
     Utils.line_bar(1, 75)
     Utils.place_space
-    puts "Feedback Placeholder"
+    puts screenfeed
     Utils.line_bar(1, 75)
   end
 
-  def Screens.game_screen(numbers, tries)
+  def Screens.game_screen(tries, line_1, line_2, line_3, line_4)
     system ('clear')
     Utils.line_bar(2, 75)
     Utils.place_space
     puts "Currently Guessing against Compu-bot"
     Utils.line_bar(2, 75)
-    print numbers[0,25]
+    print line_4
     puts
-    print numbers[25,25]
+    print line_3
     puts
-    print numbers[50,25]
+    print line_2
     puts
-    print numbers[75,25]
+    print line_1
     puts
     Utils.line_bar(1, 75)
     Utils.place_space
@@ -40,6 +40,18 @@ module Screens
     print tries
     puts
     Utils.line_bar(1, 75)
+  end
+
+  def Screens.win_screen
+    system ('clear')
+    Utils.line_bar(2, 75)
+    Utils.place_space
+    puts "You've guessed correctly, tubular!!"
+    Utils.line_bar(2, 75)
+    Utils.place_space
+    puts "Returning to the main menu"
+    Utils.line_bar(2, 75)
+    Utils.interceptor
   end
 
   def Screens.lose_screen

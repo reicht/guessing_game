@@ -4,14 +4,15 @@ module Eval
       if guess == value
         puts "Congratulations, you win"
         Utils.interceptor
+        true
       elsif guess > value
-        puts "Lower"
+        puts "The target is lower"
         Utils.interceptor
-        true
+        "higher"
       elsif guess < value
-        puts "Higher"
+        puts "The target is higher"
         Utils.interceptor
-        true
+        "lower"
       else
         puts "ERROR"
         Utils.interceptor
